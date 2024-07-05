@@ -3,8 +3,8 @@
 
 # `listapps` - List apps under macOS!
 
-These are three implementations, with [Swift] (`64.1 ms`) and [Objective-C]
-(`75.1 ms`), trying to mimic `mdfind`'s (`1.9 ms`) behavior to list app
+These are three implementations, with [Swift] (`68.2 ms`) and [Objective-C]
+(`78.4 ms`), trying to mimic `mdfind`'s (`29.1 ms`) behavior to list app
 locations.
 
 ## Getting Started
@@ -45,11 +45,11 @@ $ ./listapp-swift | grep "Docker.app"
 
 All programs were benchmarked with [`hyperfine`]:
 
-| Command          |  Mean [ms] | Min [ms] | Max [ms] |     Relative |
-| :--------------- | ---------: | -------: | -------: | -----------: |
-| `listapps-sh`    |  1.9 ± 0.4 |      1.6 |      3.5 |         1.00 |
-| `listapps-objc`  | 64.1 ± 5.0 |     54.3 |     81.2 | 34.41 ± 7.76 |
-| `listapps-swift` | 75.1 ± 6.5 |     65.1 |     88.4 | 40.34 ± 9.23 |
+| Command          |  Mean [ms] | Min [ms] | Max [ms] |    Relative |
+| :--------------- | ---------: | -------: | -------: | ----------: |
+| `listapps-sh`    | 29.1 ± 1.7 |     27.2 |     33.7 |        1.00 |
+| `listapps-objc`  | 68.2 ± 3.5 |     63.7 |     81.5 | 2.34 ± 0.18 |
+| `listapps-swift` | 78.4 ± 4.2 |     71.0 |     89.9 | 2.69 ± 0.21 |
 
 ## License
 
