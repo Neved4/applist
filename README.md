@@ -27,12 +27,20 @@ For the Objective-C version, go to the project directory and run:
 $ clang -framework Cocoa -o appdir-objc appdir.mm
 ```
 
-For the Swift version, go to the project directory and run:
+For the Swift version, run:
 ```sh
 $ swiftc -O appdir.swift -o appdir-swift
 ```
 
 Done!
+
+Alternatively, if you'd rather not install or compile feel free to add it as a
+function to your shell `.profile`:
+```sh
+appdir() {
+    mdfind "kMDItemContentType == 'com.apple.application-bundle'"
+}
+```
 
 ## Usage
 
@@ -41,9 +49,15 @@ $ ./appdir-swift | grep "Docker.app"
 /Applications/Docker.app
 ```
 
+This comes handy for manual [Homebrew][`brew`] reinstalls that lie outside the
+default install path:
+```sh
+$ brew reinstall --cask docker --appdir $(appdir | grep Docker)
+```
+
 ## Benchmarks
 
-All programs were benchmarked with [`hyperfine`]:
+All programs were benchmarked with [`hyperfine`] under [`arm64`]:
 
 | Command          |  Mean [ms] | Min [ms] | Max [ms] |    Relative |
 | :--------------- | ---------: | -------: | -------: | ----------: |
@@ -57,6 +71,7 @@ All programs were benchmarked with [`hyperfine`]:
    
 See the [LICENSE](LICENSE) file for details.
 
+[`arm64`]: https://en.wikipedia.org/wiki/AArch64
 [`brew`]: https://brew.sh/
 [`hyperfine`]: https://github.com/sharkdp/hyperfine
 [macOS]: https://www.apple.com/macos/
