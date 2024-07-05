@@ -14,9 +14,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     query.searchScopes = [
       NSMetadataQueryUserHomeScope,
       "/Applications",
-      "/System/Library",
+      "/System",
       "/Library",
       "/Network",
+      "/usr",
     ]
 
     NotificationCenter.default.addObserver(

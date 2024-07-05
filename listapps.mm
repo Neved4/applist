@@ -18,7 +18,7 @@
 
   self.query.searchScopes = @[
     NSMetadataQueryUserHomeScope, @"/Applications", @"/Library", @"/System",
-    @"/Network"
+    @"/Network", @"/usr"
   ];
 
   [[NSNotificationCenter defaultCenter]
