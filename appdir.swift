@@ -1,4 +1,4 @@
-// swiftc -O listapps.swift -o listapps-swift
+// swiftc -O appdir.swift -o appdir-swift
 
 import Cocoa
 

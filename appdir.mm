@@ -1,4 +1,4 @@
-// clang -framework Cocoa -o listapps-objc listapps.mm
+// clang -framework Cocoa -o appdir-objc appdir.mm
 
 #import <Cocoa/Cocoa.h>
 

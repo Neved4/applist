@@ -2,16 +2,16 @@
 
 all: build
 
-build: listapps-objc listapps-swift listapps-sh
+build: appdir-objc appdir-swift appdir-sh
 
 clean:
-	rm -f listapps-objc listapps-swift
+	rm -f appdir-objc appdir-swift
 
-listapps-objc: listapps.mm
-	clang -framework Cocoa -o listapps-objc $<
+appdir-objc: appdir.mm
+	clang -framework Cocoa -o appdir-objc $<
 
-listapps-swift: listapps.swift
-	swiftc -O $< -o listapps-swift
+appdir-swift: appdir.swift
+	swiftc -O $< -o appdir-swift
 
-listapps-sh: listapps.sh
+appdir-sh: appdir.sh
 	cp $< $@ && chmod +x $@

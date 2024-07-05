@@ -1,7 +1,7 @@
 ![Swift Badge](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=fff&style=for-the-badge)
 ![Shell Script](https://img.shields.io/badge/Shell_Script-9DDE66?logo=gnubash&logoColor=000&style=for-the-badge)
 
-# `listapps` - List apps under macOS!
+# `appdir` - List app directories under macOS!
 
 These are implementations to list app locations in a system. The ones in
 [Swift] (`68.2 ms`) and [Objective-C] (`78.4 ms`) are trying to mimic
@@ -14,22 +14,22 @@ These are implementations to list app locations in a system. The ones in
 
 If you have [`brew`] installed, just run:
 ```sh
-$ brew install Neved4/tap/listapps
+$ brew install Neved4/tap/appdir
 ```
 
 Otherwise, first clone the repo:
 ```sh
-$ git clone https://github.com/Neved4/listapps
+$ git clone https://github.com/Neved4/appdir
 ```
 
 For the Objective-C version, go to the project directory and run:
 ```sh
-$ clang -framework Cocoa -o listapps-objc listapps.mm
+$ clang -framework Cocoa -o appdir-objc appdir.mm
 ```
 
 For the Swift version, go to the project directory and run:
 ```sh
-$ swiftc -O listapps.swift -o listapps-swift
+$ swiftc -O appdir.swift -o appdir-swift
 ```
 
 Done!
@@ -37,7 +37,7 @@ Done!
 ## Usage
 
 ```sh
-$ ./listapp-swift | grep "Docker.app"
+$ ./appdir-swift | grep "Docker.app"
 /Applications/Docker.app
 ```
 
@@ -47,13 +47,13 @@ All programs were benchmarked with [`hyperfine`]:
 
 | Command          |  Mean [ms] | Min [ms] | Max [ms] |    Relative |
 | :--------------- | ---------: | -------: | -------: | ----------: |
-| `listapps-sh`    | 29.1 ± 1.7 |     27.2 |     33.7 |        1.00 |
-| `listapps-objc`  | 68.2 ± 3.5 |     63.7 |     81.5 | 2.34 ± 0.18 |
-| `listapps-swift` | 78.4 ± 4.2 |     71.0 |     89.9 | 2.69 ± 0.21 |
+| `appdir-sh`    | 29.1 ± 1.7 |     27.2 |     33.7 |        1.00 |
+| `appdir-objc`  | 68.2 ± 3.5 |     63.7 |     81.5 | 2.34 ± 0.18 |
+| `appdir-swift` | 78.4 ± 4.2 |     71.0 |     89.9 | 2.69 ± 0.21 |
 
 ## License
 
-`listapps` is licensed under the terms of the [MIT License].
+`appdir` is licensed under the terms of the [MIT License].
    
 See the [LICENSE](LICENSE) file for details.
 
