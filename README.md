@@ -3,9 +3,9 @@
 
 # `listapps` - List apps under macOS!
 
-These are three implementations, with [Swift] (`68.2 ms`) and [Objective-C]
-(`78.4 ms`), trying to mimic `mdfind`'s (`29.1 ms`) behavior to list app
-locations.
+These are implementations to list app locations in a system. The ones in
+[Swift] (`68.2 ms`) and [Objective-C] (`78.4 ms`) are trying to mimic
+`mdfind`'s (`29.1 ms`) behavior.
 
 ## Getting Started
 
