@@ -1,4 +1,4 @@
-// clang -framework Cocoa -o appdir-objc appdir.mm
+// clang -framework Cocoa -o applist-objc applist.mm
 
 #import <Cocoa/Cocoa.h>
 

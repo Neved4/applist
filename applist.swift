@@ -1,4 +1,4 @@
-// swiftc -O appdir.swift -o appdir-swift
+// swiftc -O applist.swift -o applist-swift
 
 import Cocoa
 

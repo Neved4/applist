@@ -1,8 +1,8 @@
 #!/bin/sh
 set -Cefu
 
-appdir() {
+applist() {
 	mdfind "kMDItemContentType == 'com.apple.application-bundle'"
 }
 
-appdir
+applist

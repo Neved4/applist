@@ -2,16 +2,16 @@
 
 all: build
 
-build: appdir-objc appdir-swift appdir-sh
+build: applist-objc applist-swift applist-sh
 
 clean:
-	rm -f appdir-objc appdir-swift
+	rm -f applist-objc applist-swift
 
-appdir-objc: appdir.mm
-	clang -framework Cocoa -o appdir-objc $<
+applist-objc: applist.mm
+	clang -framework Cocoa -o applist-objc $<
 
-appdir-swift: appdir.swift
-	swiftc -O $< -o appdir-swift
+applist-swift: applist.swift
+	swiftc -O $< -o applist-swift
 
-appdir-sh: appdir.sh
+applist-sh: applist.sh
 	cp $< $@ && chmod +x $@
