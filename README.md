@@ -3,14 +3,15 @@
 
 ## `applist` - List app directories in macOS! 🚀
 
-These utilities slist app locations in [macOS]
+These utilities list app locations in [macOS]
 
-The ones in [Swift] (`68.2 ms`) and [Objective-C] (`78.4 ms`) try to mimic
-`mdfind`'s (`29.1 ms`) behavior and run slower than it.
+The [Swift] (`68.2 ms`) and [Objective-C] (`78.4 ms`) implementations try to mimic
+`mdfind`'s (`29.1 ms`) behavior, but run slower than it.
 
 ## Getting Started
 
-> [!NOTE] _**This utility is only intended to run in [macOS].**_
+> [!NOTE]
+> _**This utility is only intended to run in [macOS].**_
 
 If you have [`brew`] installed, just run:
 ```sh
@@ -34,8 +35,8 @@ $ swiftc -O applist.swift -o applist-swift
 
 Done!
 
-Alternatively, if you'd rather not install or compile feel free to add it as
-a function to your shell `.profile`:
+Alternatively, if you'd rather not install or compile anything, feel free to
+add it as a function to your shell `.profile`:
 ```sh
 applist() {
     mdfind "kMDItemContentType == 'com.apple.application-bundle'"
@@ -67,12 +68,12 @@ All programs were benchmarked with [`hyperfine`] under [`arm64`]:
 
 ## See Also
 
-For other shell functions like `applist`, check [apputils](Neved4/apputils).
+For other shell functions like `applist`, check out [apputils].
 
 ## License
 
 `applist` is licensed under the terms of the [MIT License].
-   
+
 See the [LICENSE](LICENSE) file for details.
 
 [`arm64`]: https://en.wikipedia.org/wiki/AArch64
@@ -80,7 +81,7 @@ See the [LICENSE](LICENSE) file for details.
 [`hyperfine`]: https://github.com/sharkdp/hyperfine
 [macOS]: https://www.apple.com/macos/
 [MIT License]: https://opensource.org/license/mit/
-[Neved4/apputils]: https://github.com/Neved4/apputils
+[apputils]: https://github.com/Neved4/apputils
 [Objective-C]:
     https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
 [Swift]: https://www.swift.org/
