@@ -13,6 +13,14 @@ The [Swift] (`68.2 ms`) and [Objective-C] (`78.4 ms`) implementations try to mim
 > [!NOTE]
 > _**This utility is only intended to run in [macOS].**_
 
+### Prerequisites
+
+When you are building [`applist`], ensure you have either:
+- A [Swift] compiler
+- An [Objective-C] compiler.
+
+### Installing
+
 If you have [`brew`] installed, just run:
 ```sh
 $ brew install Neved4/tap/applist
@@ -23,12 +31,17 @@ Otherwise, first clone the repo:
 $ git clone https://github.com/Neved4/applist
 ```
 
-For the Objective-C version, go to the project directory and run:
+To build all variants, go to the project directory and run:
+```sh
+$ make all
+```
+
+Alternatively, to build the [Objective-C] version run:
 ```sh
 $ clang -framework Cocoa -o applist-objc applist.mm
 ```
 
-For the Swift version, run:
+For the [Swift] version, run:
 ```sh
 $ swiftc -O applist.swift -o applist-swift
 ```
@@ -46,7 +59,7 @@ applist() {
 ## Usage
 
 ```sh
-$ ./applist-swift | grep "Docker.app"
+$ applist | grep "Docker.app"
 /Applications/Docker.app
 ```
 
